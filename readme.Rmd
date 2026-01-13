@@ -16,3 +16,21 @@ output:
 | \- | Movimientos turísticos en frontera | FRONTUR | wip | [Link](https://ibestat.es/estadistica/economia/turismo/flujo-de-turistas-frontur/) |
 | data5 | Ocupación de Calvià, Capdepera, Palma y St Llorenç | INE | raw | [Link](https://ine.es/jaxiT3/Tabla.htm?t=2076) |
 |  | Turistas con destino principal las Baleares | IBESTAT | wip | [Link](https://ibestat.es/edatos/apps/statistical-visualizer/visualizer/data.html?resourceType=dataset&agencyId=IBESTAT&resourceId=000058A_000002&version=~latest#visualization/table) |
+
+
+
+
+
+# Desagregación espacial del turismo en Mallorca (Prototipo 2)
+
+## Visualización interactiva
+**[Gráfica de resultados](https://ricuib.github.io/M02sandbox/Mallorca.html)**
+
+Esta visualización muestra una desagregación espacial del turismo en Mallorca a nivel municipal, combinando: data1, data2 y data3
+
+La gráfica permite explorar la evolución temporal del turismo y comparar patrones entre municipios mediante una visualización interactiva.
+
+
+El enfoque se basa en la metodología de desagregación espacial propuesta en: [Spatial disaggregation of time series](https://arxiv.org/abs/2509.04065)
+
+Tobar, A., Mir, A., Alberich, R., Mosquera, I. G., Miró, M., & Cruz, N. A. (2025). Spatial disaggregation of time series. arXiv preprint arXiv:2509.04065.
