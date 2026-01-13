@@ -1,9 +1,9 @@
 ---
 title: "Geo_models"
-author: "ModaE"
+author: "MoDAE"
 output: 
   html_document: 
-  keep_md: true
+    keep_md: true
 ---
 
 ### Datos
