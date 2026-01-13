@@ -1,0 +1,35 @@
+---
+title: "Downloader_data1"
+output: html_document
+---
+
+
+FALTAN CASOS
+
+
+```{r}
+
+base_url = "https://ibestat.es/edatos/apis/statistical-resources/v1.0/datasets/IBESTAT/000058A_"
+end_url = "/~latest.csv"
+
+
+
+islas = c(1:13)
+
+
+file_path="../../raw_data/raw_data7/"
+file_name="raw_FRONTUR_flujo_turistas"
+format = ".csv"
+
+for(i in 1:13){
+  tmp = sprintf("%06d", i)
+  tmp_file_name = paste0(file_name,tmp,format)
+  file_name_path=paste0(file_path,tmp_file_name)
+  
+  url = paste0(base_url,tmp,end_url)
+  
+  
+  download.file(url, file_name_path, mode = "wb")
+}
+```
+

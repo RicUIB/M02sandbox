@@ -1,0 +1,100 @@
+---
+title: "data_to_RData"
+format: html
+editor: visual
+---
+
+## setwd("\~/GitHub/geo_models/Adrian/CAIB")
+
+```{r}
+library(readxl)
+library(dplyr)
+
+file_path <- "Mallorca_04-23.xlsx"
+sheet_names <- excel_sheets(file_path)
+
+# Select odd-numbered sheets starting from 5
+odd_indices <- seq(5, length(sheet_names), by = 2)
+selected_sheets <- sheet_names[odd_indices]
+
+sheet_data <- new.env()
+count = 2023
+for (sheet in selected_sheets) {
+  # Read rows 6 to 8 to create column names
+  header_rows <- read_excel(file_path, sheet = sheet, range = cell_rows(6:8), col_names = FALSE)
+  
+  # Combine header rows into column names
+  col_names <- apply(header_rows, 2, function(x) {
+    paste(na.omit(as.character(x)), collapse = "_")
+  }) %>% make.names(unique = TRUE)
+  
+  # Read data starting from row 9
+  df <- read_excel(file_path, sheet = sheet, skip = 8, col_names = FALSE)
+  n <- ncol(df)
+
+  # Extract first and last two columns
+  df <- df[, c(1, (n-1), n)]
+
+  
+  # Assign column names
+  names(df)[1:length(col_names)] <- c("Municipio","Establecimientos","Plazas")  # match lengths
+
+  # Add Year column starting from 2023
+  if (nrow(df) > 0) {
+    df$Year <- count
+  }
+  count= count-1
+  # Store in environment
+  assign(make.names(sheet), df, envir = sheet_data)
+}
+
+# Save all dataframes into a single RData file
+#save(list = ls(envir = sheet_data), envir = sheet_data, file = "separate_sheets_named_cleaned.RData")
+
+
+```
+
+```{r}
+sheet_data$Allotj.municipi_22..7.
+```
+
+```{r}
+# List all object names in the environment
+env_objects <- ls(envir = sheet_data)
+
+# Pick the i-th name (e.g., i = 2)
+i <- 20
+name_i <- env_objects[i]
+
+# Get the actual object
+sheet_i <- get(name_i, envir = sheet_data)
+sheet_i
+```
+
+```{r}
+#Pick initial sheet
+env_objects <- ls(envir = sheet_data)
+concat_data <- get(env_objects[1], envir = sheet_data)
+for (i in 2:(length(sheet_data))) {
+tmp <- get(env_objects[i], envir = sheet_data)
+#Concat sheets
+concat_data <- rbind(concat_data, tmp)
+tmp
+}
+df<- concat_data
+```
+
+```{r}
+library(dplyr)
+
+df_filtered <- df %>%
+  filter(!Municipio %in% c("No se muestran los grupos de alojamiento sin establecimientos",
+                           "(*) No es mostren els grups d'allotjament sense establiments",
+                           "The accomodation groups without establishments are not shown"))
+
+df_filtered
+```
+
+```{r}
+save(df_filtered, file = "Mallorca_plazas_turisticas.RData")
+```

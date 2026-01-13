@@ -1,0 +1,107 @@
+---
+title: "tidy_data_raw_data4"
+output: html_document
+---
+
+
+# Raw data4
+
+Datos padrón
+
+
+
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(stringr)
+```
+
+
+```{r}
+
+years = c(0:24)
+
+
+
+files <- list.files("../../raw_data/raw_data4", pattern = "\\.xlsx?$", full.names = TRUE)
+
+tmp <- read_excel(files[1], skip = 1)
+
+df_all <- data.frame(
+  CPRO = integer(),
+  PROVINCIA = character(),
+  CMUN = character(),
+  MUNICIPIO = character(),
+  POB = integer(),
+  VARONES = integer(),
+  MUJERES = integer(),
+  year = integer()
+)
+i=1
+for(k in files[1:25]){
+  if(k == files[10]){
+    df_new <- read_excel(k, col_names = FALSE)
+  }
+  else if(k == files[13])
+  {
+    df_new <- read_excel(k, skip = 1, col_names = FALSE)
+  }
+  else{
+  df_new <- read_excel(k, skip = 1, col_names = FALSE)
+  }
+  #fix pob name
+  colnames(df_new)[grep("POB|TOTAL|AMBOS |Ambos", colnames(df_new))] <- "TOTAL"
+  colnames(df_new)[grep("NOMBRE|MUNICIPIO", colnames(df_new))] <- "MUNICIPIO"
+  colnames(df_new)[grep("Varones", colnames(df_new))] <- "VARONES"
+  colnames(df_new)[grep("Mujeres", colnames(df_new))] <- "MUJERES"
+  
+  if(years[i]<30){
+    df_new$year = years[i]+2000}
+  else{
+    df_new$year = years[i]+1900
+  }
+  
+  colnames(df_new) <- colnames(df_all)
+  print(colnames(df_new))
+  print(k)
+  df_all <- rbind(df_all,df_new)
+  i=i+1
+  }
+
+```
+
+
+
+```{r}
+unique(df_all$PROVINCIA)
+"Illes Balears"
+"Balears, Illes"
+
+df_clean <- df_all %>% filter(df_all$CPRO== "07")
+
+colnames(df_clean)
+```
+
+
+
+```{r}
+df_clean <- df_clean %>%
+  rename(
+    "male" = "VARONES",
+    "female" = "MUJERES",
+    "code_mun" = "CMUN",
+    "total" ="POB",
+    "municipality" = "MUNICIPIO"
+  )
+df_clean
+```
+
+
+
+
+
+```{r}
+write_csv(df_clean,"../../tidy_data/data4/tidy_padron_municipal.csv")
+```
+

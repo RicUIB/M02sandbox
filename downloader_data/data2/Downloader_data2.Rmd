@@ -1,0 +1,21 @@
+---
+title: "Downloader_data2"
+output: html_document
+---
+
+
+
+```{r}
+url = "https://ibestat.es/edatos/apis/statistical-resources/v1.0/datasets/IBESTAT/000011A_000002/~latest.xlsx"
+
+
+
+file_path="../../raw_data/raw_data2/"
+file_name="raw_IBESTAT_iph"
+format = ".xlsx"
+file_name_path=paste0(file_path,file_name,format)
+download.file(url, file_name_path, mode = "wb")
+```
+
+
+

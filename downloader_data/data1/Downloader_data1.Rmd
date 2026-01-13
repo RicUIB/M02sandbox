@@ -1,0 +1,25 @@
+---
+title: "Downloader_data1"
+output: html_document
+---
+
+```{r}
+urls =c("https://www.caib.es/sites/estadistiquesdelturisme/ca/allotjaments_turastics/archivopub.do?ctrl=MCRST865ZI431006&id=431006",
+        "https://www.caib.es/sites/estadistiquesdelturisme/ca/allotjaments_turastics/archivopub.do?ctrl=MCRST865ZI431007&id=431007",
+        "https://www.caib.es/sites/estadistiquesdelturisme/ca/allotjaments_turastics/archivopub.do?ctrl=MCRST865ZI431008&id=431008",
+        "https://www.caib.es/sites/estadistiquesdelturisme/ca/allotjaments_turastics/archivopub.do?ctrl=MCRST865ZI431009&id=431009")
+
+islas = c("Mallorca","Menorca","Ibiza","Formentera")
+
+
+file_path="../../raw_data/raw_data1/"
+file_name="raw_CAIB_alojamientos_turisticos_"
+format = ".xlsx"
+
+for(i in 1:length(islas)){
+  tmp_file_name = paste0(file_name,islas[i],format)
+  file_name_path=paste0(file_path,tmp_file_name)
+  download.file(urls[i], file_name_path, mode = "wb")
+}
+```
+

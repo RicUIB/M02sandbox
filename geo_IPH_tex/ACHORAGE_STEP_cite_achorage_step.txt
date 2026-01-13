@@ -1,0 +1,6 @@
+\textbf{Anchorage step.} When partial information is available for specific regions and time points, such information can be incorporated as additional linear constraints of the form \( A\beta = y \), where \( A \) encodes the restriction matrix and \( y \) is a vector of known aggregates. This approach introduces a soft benchmarking mechanism. This anchoring procedure aligns with the benchmarking principle recommended by Eurostat, whereby regional accounts are adjusted to match national totals by incorporating aggregate-level constraints. See Eurostat Manual (2013)\cite{eurostat2013benchmarking}} that improves model identifiability and promotes coherence between national and regional estimates.
+
+% Scenarios I and II will probably almost never occur and
+% might be described as the ideal situation. They might
+% however serve as a benchmark for situations in which less
+% favourable data are available. (CITA literal pag 50 )

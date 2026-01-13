@@ -1,0 +1,22 @@
+---
+title: "Estructura datos"
+output: html_document
+---
+
+## Criterios estructuración datos
+
+1. Las columnas estarán en inglés
+2. El formato será snake_case. 
+3. El formato de las fechas será YYYY-MM-DD (ISO 8601).
+4. 
+
+
+Algunas traducciones habituales
+```{r}
+dict <- list(
+  "municipio" = "municipality",
+  "año" = "year"
+)
+
+```
+

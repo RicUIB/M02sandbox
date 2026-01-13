@@ -1,0 +1,52 @@
+---
+title: "raw_data_to_tidy_data3"
+output: html_document
+date: "2025-04-30"
+---
+
+
+
+
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(stringr)
+```
+
+#Turismo Receptor
+
+
+
+```{r}
+files <- list.files("../../raw_data/raw_data3", pattern = "^raw_INE_t_receptor_por_mun_destino_.*$", full.names = TRUE)
+
+
+df_all = data.frame(
+  mes = integer(),
+  pais_oring_cod = character(),
+  pais_orig	= character(),
+  mun_dest_cod	= character(),
+  mun_dest	= character(),
+  turistas	= integer(),
+  prov_dest_cod	= character(),
+  prov_dest= character()
+
+)
+for(file in files){
+  
+  sheets <- excel_sheets(file)
+  
+  for(sheet in sheets){
+  df_new <- read_excel(file, sheet = sheet)
+  df_all <- rbind(df_all,df_new)
+  }
+}
+
+df_all
+```
+
+```{r}
+write_csv(df_all,"../../tidy_data/data3/tidy_turismo_receptor_por_mun_dest.csv")
+```
+

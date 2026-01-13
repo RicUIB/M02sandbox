@@ -1,0 +1,63 @@
+---
+title: "Downloader_data3"
+output: html_document
+---
+
+
+```{r}
+url_base= "https://www.ine.es/experimental/turismo_moviles/exp_tmov_receptor_mun_"
+
+
+año = 2019:2024
+
+file_path="../../raw_data/raw_data3/"
+file_name="raw_INE_t_receptor_por_mun_destino_"
+format = ".xlsx"
+
+for(i in 1:length(año)){
+  tmp_file_name = paste0(file_name,año[i],format)
+  file_name_path=paste0(file_path,tmp_file_name)
+  
+  tmp_url = paste0(url_base,año[i],format)
+  
+  download.file(tmp_url, file_name_path, mode = "wb")
+}
+```
+
+
+
+```{r}
+url_base= "https://www.ine.es/experimental/turismo_moviles/exp_tmov_interno_mun_"
+
+
+año = 2019:2024
+
+file_path="../../raw_data/raw_data3/"
+file_name="raw_INE_t_interno_por_mun_destino_"
+format = ".xlsx"
+
+for(i in 1:length(año)){
+  tmp_file_name = paste0(file_name,año[i],format)
+  file_name_path=paste0(file_path,tmp_file_name)
+  
+  tmp_url = paste0(url_base,año[i],format)
+  
+  download.file(tmp_url, file_name_path, mode = "wb")
+}
+```
+
+
+
+Medición del turismo emisor a partir de la posición de los teléfonos móviles  está en revisión
+
+```{r}
+
+```
+
+
+Número de turistas por 
+
+```{r}
+url = "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc/53000.csv?nocab=1"
+```
+

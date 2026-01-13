@@ -1,0 +1,144 @@
+---
+title: "raw_to_unified_data1"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+df <- read.csv("../../tidy_data/data2/IBESTAT_IPH.csv",sep = ";")
+codes <- readxl::read_xlsx("../codes.xlsx",skip = 2)
+codes <- codes %>% rename("municipality" = "NOMBRE",
+                         "code_prov" = "CPRO",
+                         "code_island" = "CISLA",
+                         "code_mun" = "CMUN",
+                         "direct_code" = "DC",
+                         "island" = "ISLA")
+```
+
+
+
+
+
+```{r}
+unique(df$territorio_ca)
+```
+
+
+
+
+```{r}
+library(fuzzyjoin)
+clean_string <- function(x) {
+  x <- as.character(x)                # ensure it's character
+  x <- iconv(x, to = "ASCII//TRANSLIT")  # handle special chars (like é → e)
+  x <- tolower(x)                     # lowercase
+  x <- gsub("[^a-z0-9]", "", x)       # remove non-alphanumeric
+  return(x)
+}
+```
+
+Unified column names
+
+```{r}
+df = df %>% rename("year" = "Year", 
+                   "municipality" = "Municipio",
+                   "category" = "Categoria",
+                    "value" = "Valor",
+                   "island" = "Isla",
+                   "type" = "Tipo")
+```
+
+Fix year format
+
+```{r}
+df$year = df$year+2000
+```
+
+Clean problematic names
+
+```{r}
+unique(df$municipality)
+```
+
+Fix double name for Sa Pobla - Pobla (Sa) and other problematic names
+
+```{r}
+df <- df %>% mutate(municipality=recode(municipality,
+                                            "POBLA (SA)" = "Pobla, Sa",
+                                            "SA POBLA" = "Pobla, Sa",
+                                            "SALINES (SES)" = "Salines, Ses",
+                                            "SES SALINES" = "Salines, Ses",
+                                            "ES MERCADAL" = "Mercadal, Es",
+                                        "ES CASTELL" = "Castell, Es",
+                                        "CIUTADELLA" = "Ciutadella de Menorca"))
+```
+
+Create clear names for better fuzzy join
+
+```{r}
+codes$clean_name <- clean_string(codes$municipality)
+df$clean_name <- clean_string(df$municipality)
+```
+
+Execute fuzzy join
+
+```{r}
+joined_df <- stringdist_left_join(
+   df, codes,
+  by = "clean_name",
+  method = "jw",        # Jaro-Winkler distance (good for names)
+  max_dist = 0.11,       # Controls tolerance; adjust if needed
+  distance_col = "dist" # Optional: see how close the matches were
+)
+```
+
+Check maximum distances below threshold
+
+```{r}
+ggplot(joined_df, aes(x = dist)) +
+  geom_histogram(binwidth = 0.01) +
+  labs(title = "Distribution of Fuzzy Match Distances")
+```
+
+Check non-zero cases if correctly matched.
+
+```{r}
+joined_df %>% filter(dist>0) %>% distinct(municipality.x,municipality.y)
+```
+
+Check unmatched cases are the expected ones
+
+```{r}
+tmp = joined_df %>% filter(is.na(dist))
+
+tmp %>% filter(is.na(dist)) %>% select(municipality.x) %>% unique() %>% print()
+```
+
+Remove unwanted cases
+
+```{r}
+joined_df <- joined_df %>% filter(!is.na(dist))
+```
+
+Pick columns of interest and change name to correct format
+
+```{r}
+final_df <- joined_df %>% select(c("year","code_island","island.x","code_mun","municipality.y","category","type","value"))
+final_df <- final_df %>% rename("island" = "island.x",
+                         "municipality" = "municipality.y")
+final_df %>% filter(is.na(municipality))
+
+```
+
+```{r}
+final_df
+```
+
+Save data into a final csv
+
+```{r}
+write_csv(final_df, "../../unified_data/data1/unified_CAIB_alojamientos_turisticos.csv")
+```

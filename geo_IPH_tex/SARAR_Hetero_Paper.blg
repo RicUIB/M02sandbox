@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: SARAR_Hetero_Paper.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+The style file: elsarticle-num-names.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: references.bib
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty booktitle in gelfand2019handbook
+Warning--empty pages in gelfand2019handbook
+Warning--empty journal in harvey1990forecasting
+Warning--empty journal in marshall2011inequalities
+You've used 41 entries,
+            2918 wiz_defined-function locations,
+            868 strings with 11756 characters,
+and the built_in function-call counts, 22384 in all, are:
+= -- 1636
+> -- 694
+< -- 36
++ -- 275
+- -- 222
+* -- 2377
+:= -- 3196
+add.period$ -- 55
+call.type$ -- 41
+change.case$ -- 276
+chr.to.int$ -- 39
+cite$ -- 45
+duplicate$ -- 1818
+empty$ -- 1837
+format.name$ -- 325
+if$ -- 4185
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 331
+newline$ -- 180
+num.names$ -- 164
+pop$ -- 683
+preamble$ -- 1
+purify$ -- 279
+quote$ -- 0
+skip$ -- 505
+stack$ -- 0
+substring$ -- 1005
+swap$ -- 1136
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 342
+warning$ -- 4
+while$ -- 163
+width$ -- 0
+write$ -- 526
+(There were 4 warnings)

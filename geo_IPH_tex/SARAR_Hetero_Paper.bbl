@@ -1,0 +1,289 @@
+\begin{thebibliography}{41}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Book
+\bibitem[{LeSage and Pace(2015)}]{lesage2015introduction}
+\bibinfo{author}{J.~P. LeSage}, \bibinfo{author}{R.~K. Pace},
+  \bibinfo{title}{Introduction to Spatial Econometrics},
+  \bibinfo{publisher}{CRC press}, \bibinfo{year}{2015}.
+%Type = Book
+\bibitem[{Cressie and Wikle(2011)}]{cressie2011statistics}
+\bibinfo{author}{N.~Cressie}, \bibinfo{author}{C.~K. Wikle},
+  \bibinfo{title}{Statistics for Spatio-Temporal Data},
+  \bibinfo{publisher}{John Wiley \& Sons}, \bibinfo{year}{2011}.
+%Type = Incollection
+\bibitem[{Gelfand et~al.(2019)Gelfand, Diggle, Fuentes, and
+  Guttorp}]{gelfand2019handbook}
+\bibinfo{author}{A.~E. Gelfand}, \bibinfo{author}{P.~J. Diggle},
+  \bibinfo{author}{M.~Fuentes}, \bibinfo{author}{P.~Guttorp},
+\newblock \bibinfo{title}{Handbook of environmental and ecological statistics},
+\newblock \bibinfo{publisher}{CRC Press}, \bibinfo{year}{2019}.
+%Type = Article
+\bibitem[{Hsu et~al.(2021)Hsu, Huang, and Tsay}]{hsu2021matrix}
+\bibinfo{author}{N.-J. Hsu}, \bibinfo{author}{H.-C. Huang},
+  \bibinfo{author}{R.~S. Tsay},
+\newblock \bibinfo{title}{Matrix autoregressive spatio-temporal models},
+\newblock \bibinfo{journal}{Journal of Computational and Graphical Statistics}
+  \bibinfo{volume}{30} (\bibinfo{year}{2021}) \bibinfo{pages}{1143--1155}.
+%Type = Article
+\bibitem[{Chow and Lin(1971)}]{chow1971best}
+\bibinfo{author}{G.~C. Chow}, \bibinfo{author}{A.-l. Lin},
+\newblock \bibinfo{title}{Best linear unbiased distribution and extrapolation
+  of economic time series by related series},
+\newblock \bibinfo{journal}{Review of Economics and Statistics}
+  (\bibinfo{year}{1971}) \bibinfo{pages}{372--375}.
+%Type = Manual
+\bibitem[{{Eurostat}(2013)}]{eurostat2013benchmarking}
+\bibinfo{author}{{Eurostat}}, \bibinfo{title}{Manual on Regional Accounts
+  Methods}, \bibinfo{address}{Luxembourg}, \bibinfo{year}{2013}. \URLprefix
+  \url{https://ec.europa.eu/eurostat/documents/3859598/5937641/KS-GQ-13-001-EN.PDF},
+  \bibinfo{note}{corrected edition 2019. Eurostat Manuals and Guidelines,
+  KS-GQ-13-001-EN}.
+%Type = Article
+\bibitem[{Cuevas et~al.(2015)Cuevas, Quilis, and Espasa}]{cuevas2015}
+\bibinfo{author}{A.~Cuevas}, \bibinfo{author}{E.~M. Quilis},
+  \bibinfo{author}{A.~Espasa},
+\newblock \bibinfo{title}{Quarterly regional gdp flash estimates by means of
+  benchmarking and chain linking},
+\newblock \bibinfo{journal}{Journal of Official Statistics}
+  \bibinfo{volume}{31} (\bibinfo{year}{2015}) \bibinfo{pages}{627--647}.
+  \DOIprefix\doi{10.1515/JOS-2015-0038}.
+%Type = Inproceedings
+\bibitem[{Han and Howe(2024)}]{han2024sarn}
+\bibinfo{author}{B.~Han}, \bibinfo{author}{B.~Howe},
+\newblock \bibinfo{title}{Sarn: Structurally-aware recurrent network for
+  spatio-temporal disaggregation},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 32nd ACM International
+  Conference on Advances in Geographic Information Systems},
+  \bibinfo{year}{2024}, pp. \bibinfo{pages}{338--349}.
+%Type = Article
+\bibitem[{Proietti(2006)}]{proietti2006temporal}
+\bibinfo{author}{T.~Proietti},
+\newblock \bibinfo{title}{Temporal disaggregation by state space methods:
+  Dynamic regression methods revisited},
+\newblock \bibinfo{journal}{The Econometrics Journal} \bibinfo{volume}{9}
+  (\bibinfo{year}{2006}) \bibinfo{pages}{357--372}.
+%Type = Article
+\bibitem[{Quilis(2018)}]{quilis2018temporal}
+\bibinfo{author}{E.~M. Quilis},
+\newblock \bibinfo{title}{Temporal disaggregation of economic time series: The
+  view from the trenches},
+\newblock \bibinfo{journal}{Statistica Neerlandica} \bibinfo{volume}{72}
+  (\bibinfo{year}{2018}) \bibinfo{pages}{447--470}.
+%Type = Article
+\bibitem[{Bisio(2024)}]{bisio2024reconstructing}
+\bibinfo{author}{L.~Bisio},
+\newblock \bibinfo{title}{Reconstructing a short-term indicator by state-space
+  models: An application to estimate hours worked by quarterly national
+  accounts},
+\newblock \bibinfo{journal}{Journal of Official Statistics}
+  \bibinfo{volume}{40} (\bibinfo{year}{2024}) \bibinfo{pages}{530--553}.
+%Type = Inproceedings
+\bibitem[{Sherman(2023)}]{10208005}
+\bibinfo{author}{P.~J. Sherman},
+\newblock \bibinfo{title}{On the eigenstructure of the ar(1) covariance},
+\newblock in: \bibinfo{booktitle}{2023 IEEE Statistical Signal Processing
+  Workshop (SSP)}, \bibinfo{year}{2023}, pp. \bibinfo{pages}{6--10}.
+  \DOIprefix\doi{10.1109/SSP53291.2023.10208005}.
+%Type = Article
+\bibitem[{Harvey(1990)}]{harvey1990forecasting}
+\bibinfo{author}{A.~C. Harvey},
+\newblock \bibinfo{title}{Forecasting, structural time series models and the
+  kalman filter}  (\bibinfo{year}{1990}).
+%Type = Book
+\bibitem[{Durbin and Koopman(2012)}]{durbin2012time}
+\bibinfo{author}{J.~Durbin}, \bibinfo{author}{S.~J. Koopman},
+  \bibinfo{title}{Time series analysis by state space methods},
+  \bibinfo{publisher}{Oxford university press}, \bibinfo{year}{2012}.
+%Type = Manual
+\bibitem[{{R Core Team}(2024)}]{Rmanual}
+\bibinfo{author}{{R Core Team}}, \bibinfo{title}{R: A Language and Environment
+  for Statistical Computing}, \bibinfo{organization}{R Foundation for
+  Statistical Computing}, \bibinfo{address}{Vienna, Austria},
+  \bibinfo{year}{2024}. \URLprefix \url{http://www.R-project.org/}.
+%Type = Article
+\bibitem[{Byrd et~al.(1995)Byrd, Lu, Nocedal, and Zhu}]{byrd1995limited}
+\bibinfo{author}{R.~H. Byrd}, \bibinfo{author}{P.~Lu},
+  \bibinfo{author}{J.~Nocedal}, \bibinfo{author}{C.~Zhu},
+\newblock \bibinfo{title}{A limited memory algorithm for bound constrained
+  optimization},
+\newblock \bibinfo{journal}{SIAM Journal on scientific computing}
+  \bibinfo{volume}{16} (\bibinfo{year}{1995}) \bibinfo{pages}{1190--1208}.
+%Type = Article
+\bibitem[{Lee(2004)}]{lee2004asymptotic}
+\bibinfo{author}{L.-F. Lee},
+\newblock \bibinfo{title}{Asymptotic distributions of quasi-maximum likelihood
+  estimators for spatial autoregressive models},
+\newblock \bibinfo{journal}{Econometrica} \bibinfo{volume}{72}
+  (\bibinfo{year}{2004}) \bibinfo{pages}{1899--1925}.
+%Type = Article
+\bibitem[{Kelejian and Prucha(2010)}]{kelejian2010specification}
+\bibinfo{author}{H.~H. Kelejian}, \bibinfo{author}{I.~R. Prucha},
+\newblock \bibinfo{title}{Specification and estimation of spatial
+  autoregressive models with autoregressive and heteroskedastic disturbances},
+\newblock \bibinfo{journal}{Journal of econometrics} \bibinfo{volume}{157}
+  (\bibinfo{year}{2010}) \bibinfo{pages}{53--67}.
+%Type = Misc
+\bibitem[{{Instituto Nacional de Estadística
+  (INE)}(2025{\natexlab{a}})}]{INE_IPI2025}
+\bibinfo{author}{{Instituto Nacional de Estadística (INE)}},
+  \bibinfo{title}{Índice de producción industrial (ipi)},
+  \bibinfo{howpublished}{\url{https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736145519&idp=1254735576715}},
+  \bibinfo{year}{2025}{\natexlab{a}}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Misc
+\bibitem[{{Instituto Nacional de Estadística
+  (INE)}(2025{\natexlab{b}})}]{INE_Pop2025}
+\bibinfo{author}{{Instituto Nacional de Estadística (INE)}},
+  \bibinfo{title}{Padrón continuo de habitantes},
+  \bibinfo{howpublished}{\url{https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177095&menu=ultiDatos&idp=1254735572981}},
+  \bibinfo{year}{2025}{\natexlab{b}}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Misc
+\bibitem[{{Instituto Nacional de Estadística
+  (INE)}(2022{\natexlab{a}})}]{INE_ENC2022}
+\bibinfo{author}{{Instituto Nacional de Estadística (INE)}},
+  \bibinfo{title}{Energy consumption survey in industrial enterprises},
+  \bibinfo{howpublished}{\url{https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736146240&menu=ultiDatos&idp=1254735576715}},
+  \bibinfo{year}{2022}{\natexlab{a}}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Misc
+\bibitem[{{Instituto Nacional de Estadística
+  (INE)}(2022{\natexlab{b}})}]{INE_BusDemo2022}
+\bibinfo{author}{{Instituto Nacional de Estadística (INE)}},
+  \bibinfo{title}{Statistics on mercantile companies},
+  \bibinfo{howpublished}{\url{https://ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177026&idp=1254735576550}},
+  \bibinfo{year}{2022}{\natexlab{b}}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Misc
+\bibitem[{{Ministerio de Agricultura, Pesca y Alimentación
+  (MAPA)}(2022)}]{MAPA_Food2022}
+\bibinfo{author}{{Ministerio de Agricultura, Pesca y Alimentación (MAPA)}},
+  \bibinfo{title}{Panel de consumo alimentario: Series anuales},
+  \bibinfo{howpublished}{\url{https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales}},
+  \bibinfo{year}{2022}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Misc
+\bibitem[{{Instituto Nacional de Estadística (INE)}(2022)}]{INE_LFS2022}
+\bibinfo{author}{{Instituto Nacional de Estadística (INE)}},
+  \bibinfo{title}{Encuesta de población activa (epa)},
+  \bibinfo{howpublished}{\url{https://www.ine.es/dyngs/INEbase/operacion.htm?c=Estadistica_C&cid=1254736176918&menu=ultiDatos&idp=1254735976595}},
+  \bibinfo{year}{2022}. \bibinfo{note}{Accessed July 27, 2025}.
+%Type = Article
+\bibitem[{Comber et~al.(2011)Comber, Brunsdon, and
+  Charlton}]{comber2011spatial}
+\bibinfo{author}{A.~Comber}, \bibinfo{author}{C.~Brunsdon},
+  \bibinfo{author}{M.~Charlton},
+\newblock \bibinfo{title}{A spatial analysis of variations in health access:
+  linking geography, socio-economic status and access to health services},
+\newblock \bibinfo{journal}{International Journal of Health Geographics}
+  \bibinfo{volume}{10} (\bibinfo{year}{2011}) \bibinfo{pages}{1--11}.
+  \DOIprefix\doi{10.1186/1476-072X-10-44}.
+%Type = Article
+\bibitem[{Dai and Wang(2011)}]{dai2011geographic}
+\bibinfo{author}{D.~Dai}, \bibinfo{author}{F.~Wang},
+\newblock \bibinfo{title}{Geographic disparities in accessibility to food
+  stores in southwest mississippi},
+\newblock \bibinfo{journal}{Environment and Planning B: Planning and Design}
+  \bibinfo{volume}{38} (\bibinfo{year}{2011}) \bibinfo{pages}{659--677}.
+  \DOIprefix\doi{10.1068/b36088}.
+%Type = Article
+\bibitem[{Gower(1971)}]{gower1971general}
+\bibinfo{author}{J.~C. Gower},
+\newblock \bibinfo{title}{A general coefficient of similarity and some of its
+  properties},
+\newblock \bibinfo{journal}{Biometrics} \bibinfo{volume}{27}
+  (\bibinfo{year}{1971}) \bibinfo{pages}{857--871}.
+  \DOIprefix\doi{10.2307/2528823}.
+%Type = Manual
+\bibitem[{Maechler et~al.(2024)Maechler, Rousseeuw, Struyf, Hubert, and
+  Hornik}]{cluster2024}
+\bibinfo{author}{M.~Maechler}, \bibinfo{author}{P.~Rousseeuw},
+  \bibinfo{author}{A.~Struyf}, \bibinfo{author}{M.~Hubert},
+  \bibinfo{author}{K.~Hornik}, \bibinfo{title}{cluster: Cluster Analysis Basics
+  and Extensions}, \bibinfo{year}{2024}. \URLprefix
+  \url{https://CRAN.R-project.org/package=cluster}, \bibinfo{note}{r package
+  version 2.1.8}.
+%Type = Book
+\bibitem[{Little and Rubin(2002)}]{LittleRubin2002}
+\bibinfo{author}{R.~J.~A. Little}, \bibinfo{author}{D.~B. Rubin},
+  \bibinfo{title}{Statistical Analysis with Missing Data},
+  \bibinfo{edition}{2nd} ed., \bibinfo{publisher}{Wiley}, \bibinfo{year}{2002}.
+%Type = Article
+\bibitem[{Junger and De~Leon(2015)}]{Junger2015}
+\bibinfo{author}{W.~Junger}, \bibinfo{author}{A.~P. De~Leon},
+\newblock \bibinfo{title}{Imputation of missing data in time series for air
+  pollutants},
+\newblock \bibinfo{journal}{Atmospheric Environment} \bibinfo{volume}{102}
+  (\bibinfo{year}{2015}) \bibinfo{pages}{96--104}.
+%Type = Incollection
+\bibitem[{Jolliffe(2011)}]{jolliffe2011}
+\bibinfo{author}{I.~Jolliffe},
+\newblock \bibinfo{title}{Principal component analysis},
+\newblock in: \bibinfo{booktitle}{International encyclopedia of statistical
+  science}, \bibinfo{publisher}{Springer}, \bibinfo{address}{Berlin},
+  \bibinfo{year}{2011}, pp. \bibinfo{pages}{1094--1096}.
+%Type = Article
+\bibitem[{Durbin(1960)}]{Durbin1960}
+\bibinfo{author}{J.~Durbin},
+\newblock \bibinfo{title}{Estimation of parameters in time-series regression
+  models},
+\newblock \bibinfo{journal}{Journal of the Royal Statistical Society. Series B}
+  \bibinfo{volume}{22} (\bibinfo{year}{1960}) \bibinfo{pages}{139--153}.
+%Type = Misc
+\bibitem[{Harville(1998)}]{harville1998matrix}
+\bibinfo{author}{D.~A. Harville}, \bibinfo{title}{Matrix algebra from a
+  statistician's perspective}, \bibinfo{year}{1998}.
+%Type = Article
+\bibitem[{Mirsky(1975)}]{mirsky1975trace}
+\bibinfo{author}{L.~Mirsky},
+\newblock \bibinfo{title}{A trace inequality of john von neumann},
+\newblock \bibinfo{journal}{Monatshefte f{\"u}r mathematik}
+  \bibinfo{volume}{79} (\bibinfo{year}{1975}) \bibinfo{pages}{303--306}.
+%Type = Article
+\bibitem[{Marshall et~al.(2011)Marshall, Olkin, and
+  Arnold}]{marshall2011inequalities}
+\bibinfo{author}{A.~W. Marshall}, \bibinfo{author}{I.~Olkin},
+  \bibinfo{author}{B.~C. Arnold},
+\newblock \bibinfo{title}{Inequalities: theory of majorization and its
+  applications}  (\bibinfo{year}{2011}).
+%Type = Book
+\bibitem[{Horn and Johnson(2012)}]{horn2012matrix}
+\bibinfo{author}{R.~A. Horn}, \bibinfo{author}{C.~R. Johnson},
+  \bibinfo{title}{Matrix analysis}, \bibinfo{publisher}{Cambridge university
+  press}, \bibinfo{year}{2012}.
+%Type = Book
+\bibitem[{Resnick(1998)}]{resnick2019probability}
+\bibinfo{author}{S.~Resnick}, \bibinfo{title}{A probability path},
+  \bibinfo{publisher}{Springer}, \bibinfo{year}{1998}.
+%Type = Book
+\bibitem[{Van~der Vaart(2000)}]{van2000asymptotic}
+\bibinfo{author}{A.~W. Van~der Vaart}, \bibinfo{title}{Asymptotic statistics},
+  volume~\bibinfo{volume}{3}, \bibinfo{publisher}{Cambridge university press},
+  \bibinfo{year}{2000}.
+%Type = Article
+\bibitem[{Bai et~al.(2021)Bai, Choi, and Liao}]{bai2021feasible}
+\bibinfo{author}{J.~Bai}, \bibinfo{author}{S.~H. Choi},
+  \bibinfo{author}{Y.~Liao},
+\newblock \bibinfo{title}{Feasible generalized least squares for panel data
+  with cross-sectional and serial correlations},
+\newblock \bibinfo{journal}{Empirical Economics} \bibinfo{volume}{60}
+  (\bibinfo{year}{2021}) \bibinfo{pages}{309--326}.
+%Type = Book
+\bibitem[{Lehmann and Casella(1998)}]{lehmann1998theory}
+\bibinfo{author}{E.~L. Lehmann}, \bibinfo{author}{G.~Casella},
+  \bibinfo{title}{Theory of point estimation}, \bibinfo{publisher}{Springer},
+  \bibinfo{year}{1998}.
+%Type = Book
+\bibitem[{Searle et~al.(2006)Searle, Casella, and
+  McCulloch}]{searle2009variance}
+\bibinfo{author}{S.~R. Searle}, \bibinfo{author}{G.~Casella},
+  \bibinfo{author}{C.~E. McCulloch}, \bibinfo{title}{Variance components},
+  \bibinfo{publisher}{John Wiley \& Sons}, \bibinfo{year}{2006}.
+
+\end{thebibliography}

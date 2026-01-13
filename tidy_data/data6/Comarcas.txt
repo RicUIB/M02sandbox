@@ -1,0 +1,54 @@
+municipio_es;municipio_ca;id_ine;comarca
+Alaró;Alaró;07001;Raiguer
+Alcudia;Alcúdia;07003;Raiguer
+Algaida;Algaida;07004;Llano de Mallorca
+Andratx;Andratx;07005;Sierra de Tramontana
+Ariany;Ariany;07901;Llano de Mallorca
+Artá;Artà;07006;Levante
+Bañalbufar;Banyalbufar;07007;Sierra de Tramontana
+Binisalem;Binissalem;07008;Raiguer
+Búger;Búger;07009;Raiguer
+Buñola;Bunyola;07010;Sierra de Tramontana
+Calviá;Calvià;07011;Sierra de Tramontana
+Campanet;Campanet;07012;Raiguer
+Campos;Campos;07013;Migjorn
+Capdepera;Capdepera;07014;Levante
+Consell;Consell;07016;Raiguer
+Costich;Costitx;07017;Llano de Mallorca
+Deyá;Deià;07018;Sierra de Tramontana
+Escorca;Escorca;07019;Sierra de Tramontana
+Esporlas;Esporles;07020;Sierra de Tramontana
+Estellenchs;Estellencs;07021;Sierra de Tramontana
+Felanich;Felanitx;07022;Migjorn
+Fornaluch;Fornalutx;07025;Sierra de Tramontana
+Inca;Inca;07027;Raiguer
+Lloret de Vista Alegre;Lloret de Vistalegre;07028;Llano de Mallorca
+Lloseta;Lloseta;07029;Raiguer
+Llubí;Llubí;07030;Llano de Mallorca
+Lluchmayor;Llucmajor;07031;Migjorn
+Manacor;Manacor;07033;Levante
+Mancor del Valle;Mancor de la Vall;07034;Raiguer
+María de la Salud;Maria de la Salut;07035;Llano de Mallorca
+Marrachí;Marratxí;07036;Raiguer
+Montuiri;Montuïri;07038;Llano de Mallorca
+Muro;Muro;07039;Llano de Mallorca
+Palma de Mallorca;Palma;07040;Palma de Mallorca
+Petra;Petra;07041;Llano de Mallorca
+Pollensa;Pollença;07042;Sierra de Tramontana
+Porreras;Porreres;07043;Llano de Mallorca
+Puigpuñent;Puigpunyent;07045;Sierra de Tramontana
+La Puebla;Pobla, Sa;07044;Raiguer
+San Juan;Sant Joan;07049;Llano de Mallorca
+San Lorenzo del Cardezar;Sant Llorenç des Cardassar;07051;Levante
+Santa Eugenia;Santa Eugènia;07053;Llano de Mallorca
+Santa Margarita;Santa Margalida;07055;Llano de Mallorca
+Santa María del Camino;Santa María del Camí;07056;Raiguer
+Santañí;Santanyí;07057;Migjorn
+Selva;Selva;07058;Raiguer
+Sancellas;Sencelles;07047;Llano de Mallorca
+Las Salinas;Salines, Ses;07059;Migjorn
+Sinéu;Sineu;07060;Llano de Mallorca
+Sóller;Sóller;07061;Sierra de Tramontana
+Son Servera;Son Servera;07062;Levante
+Valldemosa;Valldemossa;07063;Sierra de Tramontana
+Villafranca de Bonany;Vilafranca de Bonany;07065;Llano de Mallorca

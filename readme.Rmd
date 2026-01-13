@@ -1,0 +1,18 @@
+---
+title: "Geo_models"
+author: "ModaE"
+output: 
+  html_document: 
+---
+
+### Datos
+
+| ID | Datos | Fuente | Estado | Link |
+|----|----|----|----|----|
+| data1 | Alojamientos Turisticos por municipio | CAIB | raw | [Link](https://www.caib.es/sites/estadistiquesdelturisme/ca/allotjaments_turastics/) |
+| data2 | IPH diario por isla | IBESTAT | raw | [Link](https://ibestat.es/edatos/apps/statistical-visualizer/visualizer/collection.html?resourceType=collection&agencyId=IBESTAT&resourceId=000011A_000001) |
+| data3 | Turismo interno y receptor por municipio de destino | INE | raw | [Link](https://www.ine.es/experimental/turismo_moviles/experimental_turismo_moviles.htm) |
+| data4 | Población censada por municipio por sexo | INE | raw | [Link](https://www.ine.es/pob_xls/pobmun.zip) |
+| \- | Movimientos turísticos en frontera | FRONTUR | wip | [Link](https://ibestat.es/estadistica/economia/turismo/flujo-de-turistas-frontur/) |
+| data5 | Ocupación de Calvià, Capdepera, Palma y St Llorenç | INE | raw | [Link](https://ine.es/jaxiT3/Tabla.htm?t=2076) |
+|  | Turistas con destino principal las Baleares | IBESTAT | wip | [Link](https://ibestat.es/edatos/apps/statistical-visualizer/visualizer/data.html?resourceType=dataset&agencyId=IBESTAT&resourceId=000058A_000002&version=~latest#visualization/table) |

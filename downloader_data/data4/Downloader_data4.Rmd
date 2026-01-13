@@ -1,0 +1,20 @@
+---
+title: "Downloader_data4"
+output: html_document
+---
+
+
+```{r}
+url= "https://www.ine.es/pob_xls/pobmun.zip"
+
+
+file_path="../../raw_data/raw_data4/"
+file_name="pobmun"
+format = ".zip"
+
+file_name_path=paste0(file_path,file_name,format)
+download.file(url, file_name_path, mode = "wb")
+
+unzip(file_name_path, exdir = file_path)
+```
+

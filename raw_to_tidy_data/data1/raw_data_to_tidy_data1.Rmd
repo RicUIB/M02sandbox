@@ -1,0 +1,84 @@
+---
+title: "tidy_data_raw_data1"
+output: html_document
+---
+
+
+# Raw data1
+
+CAIB alojamientos turísiticos
+
+
+
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(stringr)
+```
+
+
+```{r}
+data_path="../../raw_data/raw_data1/"
+file_name="raw_CAIB_alojamientos_turisticos_"
+islas = c("Mallorca","Menorca","Ibiza")
+format = ".xlsx"
+file_name_path=paste0(data_path,file_name,islas,format)
+
+names_sheets=lapply(file_name_path,excel_sheets)
+length(names_sheets)
+names_sheets
+# Read the first sheet
+df=tibble(
+  Municipio = character(),
+  Categoria = character(),
+  Tipo = character(),
+  Valor = character(),
+  Year = character(),
+  Isla = character()
+)
+#lista= list()
+
+for(k in 1:3){
+#k=2
+if(k==1) {s1=5;n1=3;s2=8;n2=53}
+if(k==2) {s1=8;n1=3;s2=11;n2=8}
+if(k==3) {s1=6;n1=3;s2=9;n2=5}
+Isla=islas[k]
+names_s=names_sheets[[k]]
+index_s=which(str_detect(names_s,"Allotj.municipi"))
+names_s[index_s]
+year <- str_extract(names_s[index_s], "_\\d{2}") |> str_remove("_")
+#year
+file_p=file_name_path[k]
+for(i in 1: length(index_s)){
+#i=11
+if(i>=13 & Isla=="Menorca"){ss=-3;nn=0} else {ss=0;nn=0}
+df1 <- read_excel(file_p, sheet = names_s[index_s][i],skip = s1+ss,
+                  n_max =n1+nn,
+                  col_names = FALSE, col_types = "text", 
+                  na = c("", "NA", "NULL"))
+
+aux1 <- na.omit(as.character(df1[1,-1]))
+#aux1
+aux2= as.character(df1[3,-1])
+aux2= unique(aux2)[1:2]
+#aux2
+aux3=paste(rep(aux1,each=2), rep(aux2,length(aux1)),sep="_")
+df2 <- read_excel(file_p, sheet = names_s[index_s][i], 
+                  skip=s2, n_max=n2,col_names = FALSE, 
+                  col_types = "text", na = c("", "NA", "NULL"))
+
+names(df2) <- c("Municipio", aux3)
+df3=df2 %>% pivot_longer(!Municipio, names_to = "Tipo", values_to = "Valor") %>% 
+  separate(Tipo, into = c("Categoria", "Tipo"), sep = "_") %>%
+  mutate(Year=year[i],Isla=Isla)
+df=bind_rows(df,df3)
+}
+}
+
+```
+```{r}
+write_csv(df, "../../tidy_data/data1/CAIB_alojamientos_turisticos_3.csv")
+```
+

@@ -1,0 +1,18 @@
+---
+title: "Downloader_data5"
+output: html_document
+---
+
+```{r}
+# De estos datos solo nos interesan 07011,07014,07040,07051 que son los
+# que corresponden con municipios de Baleares
+url <- "https://ine.es/jaxiT3/files/t/es/csv_bdsc/2076.csv?nocab=1"
+
+file_path="../../raw_data/raw_data5/"
+file_name="raw_INE_ocup_070_11_14_40_51"
+format = ".csv"
+file_name = paste0(file_name,format)
+file_name_path=paste0(file_path,file_name)
+download.file(url, file_name_path, mode = "wb")
+```
+
